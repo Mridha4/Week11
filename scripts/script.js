@@ -36,20 +36,36 @@
 // let area = circleArea(r);
 // alert(`The area of ${r} is ${area.toFixed(2)}`);
 
-let r = prompt("Enter a radius")
-console.log(r)
 
-function circleArea (radius)
+// let r = prompt("Enter a radius")
+// console.log(r)
+
+// function circleArea (radius)
+// {
+//     const radiusP = document.querySelector("#radius");
+//     const resultP = document.querySelector("#result");
+//     radiusP.textContent = radius;
+
+//     let calculatedArea = Math.PI * radius * radius;
+
+//     resultP.textContent = calculatedArea.toFixed(2)
+//     return calculatedArea
+// }
+
+// let area = circleArea(r);
+// alert(`The area of ${r} is ${area.toFixed(2)}`);
+
+const unorderedList = document.querySelector(".shopping"); 
+
+function populateList(list)
 {
-    const radiusP = document.querySelector("#radius");
-    const resultP = document.querySelector("#result");
-    radiusP.textContent = radius;
-
-    let calculatedArea = Math.PI * radius * radius;
-    
-    resultP.textContent = calculatedArea.toFixed(2)
-    return calculatedArea
+    for (let i = 0; i < list.length; i++)
+    {
+        let listItem = document.createElement("li");
+        listItem.textContent = list[i]
+        unorderedList.append(listItem);
+    }
 }
 
-let area = circleArea(r);
-alert(`The area of ${r} is ${area.toFixed(2)}`);
+const shoppingList = ["cheese", "bread", "green pepper"];
+populateList(shoppingList);
