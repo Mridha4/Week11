@@ -78,3 +78,19 @@ function changeListStyle()
 }
 
 changeListStyle()
+
+const listItems = document.querySelectorAll(".shopping li");
+
+function greenItem()
+{
+    for (let i = 0; i < listItems.length; i++)
+    {
+        if (listItems[i].textContent.includes("green"))
+        {
+            listItems[i].classList.add("green");
+        }
+
+    }
+
+}
+greenItem();
